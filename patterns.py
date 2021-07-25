@@ -92,24 +92,24 @@ TOTAL_PATTERNS = {
 # For terminating the program.
 EXIT_PATTERNS = {
 
-	re.compile("stop"): exit,
-	re.compile("[\w\s]+ stop"): exit,
-	re.compile("stop [\w\s]+"): exit,
-	re.compile("[\w\s]+ stop [\w\s]+"): exit,
+	re.compile("stop"),
+	re.compile("[\w\s]+ stop"),
+	re.compile("stop [\w\s]+"),
+	re.compile("[\w\s]+ stop [\w\s]+"),
 
-	re.compile("exit"): exit,
-	re.compile("[\w\s]+ exit"): exit,
-	re.compile("exit [\w\s]+"): exit,
-	re.compile("[\w\s]+ exit [\w\s]+"): exit,
+	re.compile("exit"),
+	re.compile("[\w\s]+ exit"),
+	re.compile("exit [\w\s]+"),
+	re.compile("[\w\s]+ exit [\w\s]+"),
 
-	re.compile("quit"): exit,
-	re.compile("[\w\s]+ quit"): exit,
-	re.compile("quit [\w\s]+"): exit,
-	re.compile("[\w\s]+ quit [\w\s]+"): exit,
+	re.compile("quit"),
+	re.compile("[\w\s]+ quit"),
+	re.compile("quit [\w\s]+"),
+	re.compile("[\w\s]+ quit [\w\s]+"),
 
-	re.compile("terminate"): exit,
-	re.compile("[\w\s]+ terminate"): exit,
-	re.compile("terminate [\w\s]+"): exit,
-	re.compile("[\w\s]+ terminate [\w\s]+"): exit
+	re.compile("terminate"),
+	re.compile("[\w\s]+ terminate"),
+	re.compile("terminate [\w\s]+"),
+	re.compile("[\w\s]+ terminate [\w\s]+")
 
 }
