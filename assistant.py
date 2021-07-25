@@ -71,6 +71,8 @@ if __name__ == "__main__":
     try:
         sc = Scraper()
     except Exception as e:
-        print(f"Exception {e} ocurred.")
-
-    main(sc)
+        print(f"\nException {e} ocurred.\n")
+        speak("Unable to connect to network.")
+        speak("Make sure you have a stable internet connection.")
+    else:
+        main(sc)

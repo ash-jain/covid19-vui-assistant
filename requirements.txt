@@ -1,0 +1,26 @@
+# python3==3.9.0
+
+# Requests module and its dependencies.
+requests==2.25.1
+certifi==2020.12.5
+chardet=4.0.0
+idna==2.10
+urllib3==1.26.4
+
+# BeautifulSoup4 module.
+beautifulsoup4==4.9.3
+bs4==0.0.1
+soupsieve==2.2.1
+
+# alternate parser for bs4.
+lxml==4.6.3 
+
+# Pyttsx3 module for text-to-speech conversion and its dependencies.
+pyttsx3==2.90
+pywin32==300
+pypiwin32==223
+comtypes==1.1.10
+SpeechRecognition==3.8.1
+
+# For interfacing audio drivers.
+PyAudio==0.2.11
