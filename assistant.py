@@ -50,17 +50,16 @@ def main(sc: Scraper) -> None:
 
     while run:
         speak("Listening...")
-        text = print(listen())
-        # text = input().lower()
+        # text = print(listen())
+        text = input().lower()
         result = query(sc, text, regions)
 
         if not result and text.find("update") != -1:
-            result = "Data is being updated. This may take a moment..."
-            sc.update_data()
+            result =  sc.update_data()
         elif not result and \
             any([pattern.match(text) for pattern in EXIT_PATTERNS]):
             run = False
-            result = "Exiting... Have a nice day!"
+            result = "Exiting... Have a good day!"
 
         speak(result)
 
@@ -70,9 +69,13 @@ if __name__ == "__main__":
 
     try:
         sc = Scraper()
-    except Exception as e:
+    except RuntimeError as e:
         print(f"\nException {e} ocurred.\n")
         speak("Unable to connect to network.")
         speak("Make sure you have a stable internet connection.")
+    except Exception as e:
+        speak("Unexpected error ocurred.")
+        print("If the problem persists let me know by mail \
+        aakashjainofficial@gmail.com.")
     else:
         main(sc)
